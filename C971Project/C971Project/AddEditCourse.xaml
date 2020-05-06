@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971Project.AddEditCourse" BackgroundColor="#82BCD4">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <!--Image HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Source="WGULogoFinal.png" Margin="0,5,0,0"/-->
+            <Label x:Name="TitleBar" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="20" FontFamily="Tahoma" FontAttributes="Bold" TextColor="#000000"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <StackLayout x:Name="MainStack" Padding="25,0" VerticalOptions="FillAndExpand">
+            <Label Text="Course Name" FontSize="25" FontFamily="Tahoma" TextColor="#FFFFFF" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="NameEntry" TextColor="#FFFFFF" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Placeholder="Enter Course Name"/>
+            <StackLayout x:Name="StartStack" Orientation="Horizontal" Padding="0" Spacing="25" VerticalOptions="Fill">
+                <Label Text="Start Date" FontSize="20" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <DatePicker x:Name="StartPicker" TextColor="#FFFFFF"/>
+            </StackLayout>
+            <StackLayout x:Name="EndStack" Orientation="Horizontal" Spacing="25">
+                <Label Text="Anticipated End Date" FontSize="20" FontFamily="Tahoma" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <DatePicker x:Name="EndPicker" TextColor="#FFFFFF"/>
+            </StackLayout>
+            <StackLayout x:Name="InstructorNameStack" Orientation="Horizontal" HorizontalOptions="Fill">
+                <Label Text="Instructor Name" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+                <Entry x:Name="InstructorNameEntry" HorizontalOptions="FillAndExpand" TextColor="#FFFFFF" FontSize="20" Placeholder="Enter Instructor Name" HorizontalTextAlignment="End"/>
+            </StackLayout>
+            <StackLayout x:Name="InstructorPhoneStack" Orientation="Horizontal">
+                <Label Text="Instructor Phone" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+                <Entry x:Name="InstructorPhoneEntry" HorizontalOptions="FillAndExpand" TextColor="#FFFFFF" FontSize="20" Placeholder="Enter Phone Number" Keyboard="Telephone" HorizontalTextAlignment="End"/>
+            </StackLayout>
+            <StackLayout x:Name="InstructorEmailStack" Orientation="Horizontal">
+                <Label Text="Instructor Email" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+                <Entry x:Name="InstructorEmailEntry" HorizontalOptions="FillAndExpand" TextColor="#FFFFFF" FontSize="20" Keyboard="Email" Placeholder="Enter Email" HorizontalTextAlignment="End"/>
+            </StackLayout>
+            <StackLayout x:Name="StatusStack" Orientation="Horizontal">
+                <Label Text="Status" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+                <Picker x:Name="StatusPicker" HorizontalOptions="FillAndExpand" SelectedIndex="-1" Title="Select Course Status" FlowDirection="RightToLeft" FontSize="20" TextColor="#FFFFFF">
+                    <Picker.Items>
+                        <x:String>Planned</x:String>
+                        <x:String>In Progress</x:String>
+                        <x:String>Completed</x:String>
+                        <x:String>Dropped</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <Label Text="Notes" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+            <Entry x:Name="NotesEntry" FontSize="20" TextColor="#FFFFFF" Placeholder="Enter Notes"/>
+            <Button x:Name="SaveButton" Text="Save" BackgroundColor="#82D492" FontSize="25" FontAttributes="Bold" VerticalOptions="CenterAndExpand" BorderWidth="2" BorderColor="#000000" CornerRadius="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

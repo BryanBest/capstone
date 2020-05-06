@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:C971Project"
+             x:Class="C971Project.AddEditTerm">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <!--Image HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Source="WGULogoFinal.png" Margin="0,5,0,0"/-->
+            <Label x:Name="TitleBar" Text="Add Term" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" FontSize="25" FontFamily="Tahoma" FontAttributes="Bold" TextColor="#000000"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+        <StackLayout BackgroundColor="#82BCD4" Margin="0" HorizontalOptions="FillAndExpand" Spacing="25" Padding="0">
+            <Label FontFamily="Tahoma" Text="Term Name" HorizontalTextAlignment="Center" FontSize="30" FontAttributes="Bold" TextColor="#FFFFFF" Margin="0,10,0,0"/>
+            <Entry x:Name="TermName" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="#FFFFFF" FontSize="20" Placeholder="Enter Term Name" Margin="100,0"/>
+            <Label FontFamily="Tahoma" Text="Start Date" HorizontalTextAlignment="Center" FontSize="30" FontAttributes="Bold" TextColor="#FFFFFF" Margin="0,10,0,0"/>
+            <DatePicker x:Name="StartDate" HorizontalOptions="CenterAndExpand" Margin="0" TextColor="#FFFFFF" FontSize="20"/>
+            <Label FontFamily="Tahoma" Text="Anticipated End Date" HorizontalTextAlignment="Center" FontSize="30" FontAttributes="Bold" TextColor="#FFFFFF" Margin="0,10,0,0"/>
+            <DatePicker x:Name="EndDate" HorizontalOptions="Center" TextColor="#FFFFFF" FontSize="20"/>
+            <Button x:Name="SaveTerm" VerticalOptions="CenterAndExpand" Text="Save" FontFamily="Tahoma" FontSize="25" FontAttributes="Bold" BackgroundColor="#82D492" HorizontalOptions="Center" WidthRequest="300" BorderColor="#000000" BorderWidth="2" CornerRadius="10"/>
+        </StackLayout>
+</ContentPage>

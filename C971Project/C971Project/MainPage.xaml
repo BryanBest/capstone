@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FormsPinView.Core;assembly=FormsPinView.Core"
+             x:Class="C971Project.MainPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="CenterAndExpand">
+            <!--Image HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Source="WGULogoFinal.png" Margin="0,5,0,0"/-->
+            <Label Text="AcadAgenda" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="25" FontFamily="Tahoma" FontAttributes="Bold" TextColor="#000000"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="MainStack" VerticalOptions="StartAndExpand" HorizontalOptions="Fill" Spacing="5" Margin="20,10">
+                <Label Text="Terms" FontSize="25" HorizontalOptions="CenterAndExpand" TextColor="#000000" TextDecorations="Underline"/>
+                <StackLayout x:Name="TermStack" AutomationId="TermStack" Spacing="5">
+
+                </StackLayout>
+                <Button AutomationId="AddTermButtonID" BackgroundColor="#82D492" BorderColor="#000000" Text="Add Term" TextColor="#000000" FontAttributes="Italic" BorderWidth="2" ScaleY="1" VerticalOptions="Start" HeightRequest="100" Clicked="Button_Clicked" Image="AddIcon" HorizontalOptions="Fill" ContentLayout="Bottom,10" CornerRadius="10" Padding="0,10" Font="Tahoma" FontSize="25"/>
+                <Button x:Name="TestButton" Text="Generate Sample Data" IsVisible="False" IsEnabled="False"/>
+                <Button x:Name="Purge" Text="Purge" IsVisible="False" IsEnabled="False"/>
+                <!-- Place new controls here -->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+    
+
+
+</ContentPage>

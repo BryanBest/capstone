@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971Project.CourseView" BackgroundColor="#82BCD4">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <!--Image HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Source="WGULogoFinal.png" Margin="0,5,0,0"/-->
+            <Label x:Name="TitleBar" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="25" FontFamily="Tahoma" FontAttributes="Bold" TextColor="#000000" Text="Course"/>
+            <Button x:Name="EditButton" ImageSource="EditIcon" BackgroundColor="#00000000" HorizontalOptions="EndAndExpand" WidthRequest="30"/>
+            <Button x:Name="DeleteButton" ImageSource="DeleteIcon" HorizontalOptions="End" BackgroundColor="#00000000" WidthRequest="30" Margin="0,0,10,0"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout x:Name="MainStack" Padding="15,0" VerticalOptions="FillAndExpand" Spacing="20">
+            <Label x:Name="CourseNameLabel" FontSize="35" FontFamily="Tahoma" TextColor="#FFFFFF" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+            <StackLayout x:Name="StartStack" Orientation="Horizontal" Padding="0" Spacing="10" VerticalOptions="Fill" HorizontalOptions="FillAndExpand">
+                <Label Text="Start Date" FontSize="20" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Button x:Name="StartNotificationButton" WidthRequest="30" HorizontalOptions="Start" ImageSource="NotificationOn" BackgroundColor="#00FFFFFF"/>
+                <Label x:Name="StartDateLabel" FontSize="20" TextColor="#FFFFFF" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout x:Name="EndStack" Orientation="Horizontal" Spacing="10">
+                <Label Text="Anticipated End Date" FontSize="20" FontFamily="Tahoma" TextColor="#FFFFFF" FontAttributes="Bold"/>
+                <Button x:Name="EndNotificationButton" ImageSource="NotificationOff" BackgroundColor="#00FFFFFF" WidthRequest="30" HorizontalOptions="Start"/>
+                <Label x:Name="EndDateLabel" FontSize="20" TextColor="#FFFFFF" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout x:Name="InstructorNameStack" Orientation="Horizontal" HorizontalOptions="Fill">
+                <Label Text="Instructor Name" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+                <Label x:Name="InstructorNameLabel" FontSize="20" TextColor="#FFFFFF" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout x:Name="InstructorPhoneStack" Orientation="Horizontal">
+                <Label Text="Instructor Phone" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+                <Label x:Name="InstructorPhoneLabel" FontSize="20" TextColor="#FFFFFF" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout x:Name="InstructorEmailStack" Orientation="Horizontal">
+                <Label Text="Instructor Email" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+                <Label x:Name="InstructorEmailLabel" FontSize="15" TextColor="#FFFFFF" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout x:Name="StatusStack" Orientation="Horizontal">
+                <Label Text="Status" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+                <Label x:Name="StatusLabel" FontSize="20" TextColor="#FFFFFF" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Notes" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="20" FontFamily="Tahoma"/>
+                <ImageButton x:Name="ShareButton" Source="ShareIcon" BackgroundColor="#00000000"/>
+            </StackLayout>
+            <Label x:Name="NotesLabel" FontSize="20" TextColor="#FFFFFF" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="AssessmentsButton" Text="Assessments" FontAttributes="Bold" BorderColor="#000000" BorderWidth="2" BackgroundColor="#FFFFFF" TextColor="#000000" Margin="75,0,75,25"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
